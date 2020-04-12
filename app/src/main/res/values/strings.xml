@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Attractions Sochi</string>
+    <string name="title_activity_point">Point sochi.earth</string>
+    <string name="desc">Description</string>
+    <string name="lat">No data. Reload.</string>
+    <string name="date">01/09/2019</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="coordinatevalue">00.000000, 00.000000</string>
+    <string name="del">Delete</string>
+    <string name="notHaveCoordinate">Can\'t get coordinate</string>
+    <string name="notStartMaps">Can\'t start Google maps</string>
+    <string name="noInternet">No Internet connection</string>
+    <string name="menuAbout">About app</string>
+    <string name="menuLoad">Load data</string>
+    <string name="menuDolmens">Dolmens</string>
+</resources>

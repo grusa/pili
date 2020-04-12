@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Достопримечательности Сочи</string>
+    <string name="title_activity_point">Точка sochi.earth</string>
+    <string name="desc">Описание</string>
+    <string name="lat">Нет данных, требуется загрузка</string>
+    <string name="date">01/09/2019</string>
+    <string name="latitude">Широта</string>
+    <string name="longitude">Долгота</string>
+    <string name="coordinatevalue">00.000000, 00.000000</string>
+    <string name="del">Удалить</string>
+    <string name="notHaveCoordinate">Нет координат</string>
+    <string name="notStartMaps">Невозможно стартовать Google maps</string>
+    <string name="noInternet">Нет подключения к Интернет</string>
+    <string name="menuAbout">О приложении</string>
+    <string name="menuLoad">Загрузка данных</string>
+    <string name="menuDolmens">Дольмен</string>
+</resources>

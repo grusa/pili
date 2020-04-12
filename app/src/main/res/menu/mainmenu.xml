@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item
+        android:id="@+id/Dolmens"
+        android:title="@string/menuDolmens" />
+-->
+    <item
+        android:id="@+id/Loading"
+        android:title="@string/menuLoad" />
+    <item
+        android:id="@+id/About"
+        android:title="@string/menuAbout" />
+</menu>
