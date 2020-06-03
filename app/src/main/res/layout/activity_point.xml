@@ -28,6 +28,7 @@
             android:id="@+id/photo"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:scaleType="fitCenter"
             android:layout_margin="8dp"
             android:contentDescription="@string/desc"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
@@ -39,27 +40,38 @@
             android:layout_margin="8dp"
             android:layout_marginEnd="16dp"
             android:importantForAutofill="no"
-            android:inputType="textMultiLine"
             android:gravity="start"
-            android:textSize="16dp"
+            android:textSize="16sp"
+
+            android:linksClickable="true"
             android:textAlignment="gravity"
             app:layout_constraintBottom_toTopOf="@+id/coordinate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/photo" />
 
-        <TextView
-            android:id="@+id/coordinate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/twcolor"
-            android:gravity="center"
-            android:onClick="startMap"
-            android:text="@string/coordinatevalue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/coordinate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/twcolor"
+        android:gravity="center"
+        android:onClick="startMap"
+        android:text="@string/coordinatevalue"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btcolor"
+        app:adSize="BANNER"
+        app:adUnitId="@string/adsString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

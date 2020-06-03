@@ -10,6 +10,8 @@ import android.util.Log;
 import android.widget.Toast;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -42,6 +44,11 @@ public class PointRepository {
     private CatalogesDao mCatalogesDao;
     private RoutesDao mRoutesDao;
     private LiveData<List<Point>> mAllPoint;
+    private LiveData<List<Point>> mDolmenPoint;
+    private LiveData<List<Point>> mChurchesPoint;
+    private LiveData<List<Point>> mNaturePoint;
+    private LiveData<List<Point>> mCulturePoint;
+    private LiveData<List<Point>> mSportPoint;
     private LiveData<List<Catalog>> mAllCataloges;
     private LiveData<List<Route>> mAllRoutes;
 
@@ -51,7 +58,7 @@ public class PointRepository {
       //  mCatalogesDao = db.catalogesDao();
         //mRoutesDao = db.routesDao();
         try {
-            mAllPoint = mPointDao.getAllPoints();
+            mAllPoint= mPointDao.getAllPoints();
         } catch (Exception e) {
 //            Log.d(TAG,e.toString());
         }
@@ -59,7 +66,32 @@ public class PointRepository {
         //mAllRoutes = mRoutesDao.getRoutes();
     }
     public LiveData<List<Point>> getPoints() {
-     return mAllPoint;
+        mAllPoint = mPointDao.getAllPoints();
+        return mAllPoint;
+    }
+    public LiveData<List<Point>> getDolmenPoints() {
+        mDolmenPoint = mPointDao.getDolmenPoints();
+        return mDolmenPoint;
+    }
+    public LiveData<List<Point>> getChurchePoints() {
+        mChurchesPoint = mPointDao.getChurchePoints();
+        return mChurchesPoint;
+    }
+    public LiveData<List<Point>> getNaturePoints() {
+        mNaturePoint = mPointDao.getNaturePoints();
+        return mNaturePoint;
+    }
+    public LiveData<List<Point>> getCulturePoints() {
+        mCulturePoint = mPointDao.getCulturePoints();
+        return mCulturePoint;
+    }
+    public LiveData<List<Point>> getSportPoints() {
+        mSportPoint = mPointDao.getSportPoints();
+        return mSportPoint;
+    }
+    public LiveData<List<Point>> getCatalogPoints(int catId) {
+        mAllPoint = mPointDao.getDolmenPoints();
+        return mAllPoint;
     }
     public LiveData<List<Point>> getPointById(int id) {
         //COMPLETED get point by name

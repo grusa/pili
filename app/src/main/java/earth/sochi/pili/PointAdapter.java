@@ -100,8 +100,13 @@ public class PointAdapter  extends RecyclerView.Adapter<PointAdapter.PointHolder
         }
         }
     void setPoints(List<Point> points) {
+        //if (mPoint!=null) mPoint.clear();
         mPoint = points;
         notifyDataSetChanged();
+    }
+    public void refreshList(){
+        this.notifyDataSetChanged();
+        //this.notifyAll(); //!down
     }
     @Override
     public int getItemCount() {

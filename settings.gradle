@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':NativeTemplatesAndroid-1.0.0'
 rootProject.name='pili'

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Attractions Sochi</string>
+    <string name="app_name">Достопримечательности Сочи</string>
     <string name="title_activity_point">Point sochi.earth</string>
     <string name="desc">Description</string>
     <string name="lat">No data. Reload.</string>
@@ -14,4 +14,21 @@
     <string name="menuAbout">About app</string>
     <string name="menuLoad">Load data</string>
     <string name="menuDolmens">Dolmens</string>
+    <string name="menuAll">All</string>
+    <string name="menuNature">Nature</string>
+    <string name="menuCulture">Culture</string>
+    <string name="menuChurches">Churches</string>
+    <string name="menuSport">Sport</string>
+    <string name="exitText">To exit press Back again</string>
+    <string name="onMap">Shoe on map</string>
+    <!-- product <string name="adsString">ca-app-pub-1252249250119207/9274271204</string> -->
+    <!--TEST-->
+    <!--
+    <string name="adsString">ca-app-pub-3940256099942544/6300978111</string>
+    -->
+    <!--PRODUCT-->
+    <!--
+          <string name="adsString">ca-app-pub-1252249250119207/9274271204</string>
+    -->
+    <string name="adsString">ca-app-pub-1252249250119207/9274271204</string>
 </resources>

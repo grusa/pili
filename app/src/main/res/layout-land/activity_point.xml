@@ -29,11 +29,11 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
+        android:scaleType="fitCenter"
         android:contentDescription="@string/desc"
-        app:layout_constraintBottom_toTopOf="@+id/coordinate"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
 
     <TextView
         android:id="@+id/description"
@@ -42,27 +42,38 @@
         android:layout_margin="8dp"
         android:gravity="start"
         android:importantForAutofill="no"
-        android:inputType="textMultiLine"
         android:textAlignment="gravity"
-        android:textSize="16dp"
+        android:textSize="16sp"
+        android:linksClickable="true"
         app:layout_constraintBottom_toTopOf="@+id/coordinate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/photo"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
          />
 
-        <TextView
-            android:id="@+id/coordinate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/twcolor"
-            android:gravity="center"
-            android:onClick="startMap"
-            android:text="@string/coordinatevalue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/coordinate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/twcolor"
+        android:gravity="center"
+        android:onClick="startMap"
+        android:text="@string/coordinatevalue"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/photo" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btcolor"
+        app:adSize="BANNER"
+        app:adUnitId="@string/adsString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/coordinate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

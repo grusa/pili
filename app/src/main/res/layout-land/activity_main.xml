@@ -22,15 +22,91 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" >
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btcolor"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:text="@string/menuAll" />
+            <Button
+                android:id="@+id/btDolmens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/dolmen"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"     />
+            <Button
+                android:id="@+id/btNature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/nature"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"           />
+            <Button
+                android:id="@+id/btChurches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/churche"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                />
+            <Button
+                android:id="@+id/btCulture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/culture"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                 />
+            <Button
+                android:id="@+id/btSport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/sport"
+                android:onClick="btCategoryPressed"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/points_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="0dp"
         android:background="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         tools:layout_editor_absoluteX="0dp" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btcolor"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="@string/adsString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/points_recyclerview"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
